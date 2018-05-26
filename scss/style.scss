@@ -1,0 +1,286 @@
+@import "normalize";
+@import "layout";
+@import "slick";
+
+@font-face {
+	font-family: "Gotham";
+	src: url("../fonts/GothamBook.woff") format("woff"), url("../fonts/GothamBook.woff2") format("woff2");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Gotham";
+	src: url("../fonts/gotham-medium-webfont.woff") format("woff"), url("../fonts/gotham-medium-webfont.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gotham";
+	src: url("../fonts/Gotham-Bold.woff") format("woff"), url("../fonts/Gotham-Bold.woff2") format("woff2");
+	font-weight: bold;
+	font-style: normal;
+}
+
+$main-color: #2C4058;
+$main-color-light: rgba(74, 85, 98, 0.5);
+$primary-color: #fff;
+
+body{
+	color: $primary-color;
+}
+
+
+
+/* Layout */
+.ba-container{
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1170px;
+}
+
+
+
+/* Typography */
+h1, h2, h3, h4, h5,h6, {
+	margin: 0;
+}
+
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	text-decoration: none;
+	color: $primary-color;
+}
+a:hover, a:active {
+	color: $main-color;
+}
+
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+
+.ba-header {
+	position: relative;
+	.ba-menu {
+		padding-top: 10px; 
+		display: flex;
+		position: absolute;
+		z-index: 2;
+	}
+	.ba-socials {
+		margin-left: 30px;
+		padding-top: 10px;
+		a	{		
+			border: 1px solid #fff;
+			border-radius: 50%;
+			padding: 4px 8px 2px;
+			margin-left: 8px;
+			font-size: 16px;
+			display: inline-block;
+			
+			svg {
+				fill: $primary-color;
+				width: 16px;
+				height: 18px;
+				text-align: center;
+				
+			}
+			
+		}
+	}
+	.ba-scroll {
+		color: #FFF;
+		font-size: 18px;
+		position: absolute;
+		bottom: 128px;
+		left: 47.5%;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		padding: 2px 6px 4px;
+		display: block;
+		
+	}
+}
+
+
+.ba-nav__list {
+	display: flex;
+	li {
+		list-style: none;
+		padding-left: 60px;
+		text-transform: uppercase;
+		a {
+			&:before {
+				content: "";
+				border: 1px solid $primary-color;
+				border-radius: 50%;
+				display: inline-block;
+				width: 9px;
+				height: 9px;
+				margin-right: 14px;
+				
+			}
+		}
+	}
+}
+
+.ba-slider {
+	&__slide {
+		min-height: 100vh;
+		color: #FFF;
+		background: 50%;
+		background-size: cover;
+		position: relative;
+	}
+	&__info {
+		padding-top: 350px;
+	}
+	&__title {
+		font: 700 80px/1 "Gotham", sans-serif;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	p {
+		text-align: center;
+		font: 300 18px/1.2 "Gotham", sans-serif;
+		text-transform: uppercase;
+	}
+	
+}
+
+.slick-dots {
+	position: absolute;
+	right: 40px;
+	top: 300px;
+	list-style: none;
+
+	button{
+		display: block;
+		width: 9px;
+		height: 9px;
+		border: solid 2px #fff;
+		border-radius: 50%;
+		font-size: 0;
+		padding: 0;
+		background: none;
+		margin-bottom: 40px;
+		&:hover, &focus {
+			opacity: .6;
+		}
+	}
+	.slick-active {
+		button{
+			background: $primary-color;
+		}
+	}
+}
+
+.ba-col-6-mod {
+	position: relative;
+}
+
+.ba-project {
+	margin: 100px 0 140px 0;
+	&__img1 {
+		width: 75%;
+
+	}
+	&__img2 {
+		position: absolute;
+		width: 75%;
+		right: 0;
+		top: 20%;
+	}
+	&__title {
+		font: 700 44px/1.3 "Gotham", sans-serif;
+		text-align: center;
+		margin: 0;
+		margin-bottom: 100px;
+		color: #2c4058;
+
+	}
+	&__trade {
+		margin-top: 100px;
+		padding-left: 40px;
+		h3 {
+			font: 300 22px/1.4 "Gotham", sans-serif;
+			color:  $main-color;
+			margin: 0;
+		}
+		h2 {
+			font: 700 34px/1.4 "Gotham", sans-serif;
+			color:  $main-color;
+			margin: 0;
+
+		}
+		p {
+			margin: 0;
+			font: 400 18px/1.4 "Open Sans", sans-serif;
+			color: $main-color-light;
+			max-width: 460px;
+		}
+		button {
+				display: inline-block;
+				min-width: 190px;
+				padding: 18px;
+   				font: 300 14px/1 "Gotham", sans-serif;
+				border: 1px solid $main-color;
+    			margin-top: 35px;
+    			margin-bottom: 60px;
+    			letter-spacing: 0.075em;
+    			color: #2c4058;
+    			background-color: $primary-color;
+    			text-transform: uppercase;
+    			vertical-align: middle;
+    			&:hover {
+					background-color: $main-color;
+					color: $primary-color;
+    			}
+    			.ba-subtitle-italic {
+    				font: 300 14px/22px "Open Sans", sans-serif;
+					font-style: italic;
+					
+    			}
+		}
+	}
+}
+
+
+
